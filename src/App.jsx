@@ -4,6 +4,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact/Contact";
 import Error from "./components/Error/Error";
 import MyProjects from "./components/myProjects/MyProjects";
 import Navigation from "./components/Navigation/Navigation";
@@ -30,6 +31,7 @@ function App() {
                 <Route path="pro4" element={<Pro4 />} />
               </Route>
               <Route path="aboutme" element={<AboutMe />} />
+              <Route path="contact" element={<Contact />} />
             </Route>
             <Route path="*" element={<Error />} />
           </Routes>

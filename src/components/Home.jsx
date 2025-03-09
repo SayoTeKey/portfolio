@@ -1,9 +1,14 @@
 import React from "react";
 import Footer from "./Footer";
+import picturePro1 from ".././assets/images/project1.jpg";
+import picturePro2 from ".././assets/images/project2.jpg";
+import picturePro3 from ".././assets/images/project3.jpg";
+import picturePro4 from ".././assets/images/project4.jpg";
+import picturePro5 from ".././assets/images/project5.jpg";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <section className="top-20 z-10 p-8 border-2 border-black">
         <h1 className="font-bold text-4xl text-slate-700 mb-6">
           Welcome to my Homepage
@@ -18,43 +23,42 @@ const Home = () => {
         </button>
       </section>
       <section>
-        <div class="grid gap-4">
-          <div class="grid grid-cols-5 gap-4">
+        <div class="w-1/2 grid gap-4">
+          <div class="grid grid-cols-4 gap-4">
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                src={picturePro1}
                 alt=""
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                src={picturePro2}
                 alt=""
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                src={picturePro3}
                 alt=""
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                src={picturePro4}
                 alt=""
               />
             </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-                alt=""
-              />
-            </div>
+            <button
+              type="button"
+              class="mt-20 ml-[50px] text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              Show more projects
+            </button>
           </div>
         </div>
       </section>
