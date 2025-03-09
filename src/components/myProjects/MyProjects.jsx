@@ -138,9 +138,7 @@ const MyProjects = () => {
             <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Project 5
             </h2>
-            <h3 className=" text-gray-900 dark:text-red-200">
-              GEOMETRICS IN THE 1970'S
-            </h3>
+            <h3 className=" text-gray-900 dark:text-red-200">TECHNO CRYPTIC</h3>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Voluptate cum magnam harum minima nam placeat culpa pariatur sunt,
               tempora autem enim, eos quisquam iste repellendus expedita. Id

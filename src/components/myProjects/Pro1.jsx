@@ -1,4 +1,5 @@
 import React from "react";
+import picturePro1 from "../../assets/images/project1.jpg";
 
 const Pro1 = () => {
   return (
