@@ -16,9 +16,9 @@ function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <>
       <div className="relative bg-tori h-screen -z-10 w-screen bg-cover bg-no-repeat bg-fixed"></div>
-      <div className="z-10  fixed">
+      <div className="z-10 absolute">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Navigation />}>
@@ -36,7 +36,7 @@ function App() {
         </BrowserRouter>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -1,14 +1,22 @@
 import React from "react";
 import panda from "../../assets/images/red-panda-confused.jpg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Error = () => {
+  const navigate = useNavigate();
+  const [count, setCount] = useState(10);
+
+  useEffect();
+
   return (
-    <div>
-      <img src={panda} alt="red panda is confused- page not found" />
+    <div className="border-green-60">
       {/* Error 404 */}
-      <h1 className="font-extrabold text-6xl mt-14">Error 404</h1>
+      <h1 className="tracking-widest font-extrabold text-6xl mt-14">
+        Error 404
+      </h1>
       <h2 className="text-3xl">Page not found!</h2>
+      <img src={panda} alt="red panda is confused- page not found" />
       <p>Please check your adress!</p>
       <p>Maybe one of these woll point you in the right direction?</p>
       {/* verlinkung zu allen seiten */}
