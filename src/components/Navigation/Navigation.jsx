@@ -1,22 +1,97 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
 
 const Navigation = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <nav className="bg-red-200 fixed top-[50px] shadow-lg mx-2 px-4 pb-2 pt-2 tracking-widest rounded grid grid-cols-3 gap-x-5 divide-purple-950 text-grey-600">
+      <nav className="bg-red-200 sticky -top-10 shadow-lg mx-2 px-4 pb-2 pt-2 tracking-widest rounded grid grid-cols-4 gap-x-3 divide-purple-950 text-grey-600 z-50">
         <NavLink
           className="text-center px-4 hover:text-purple-950 hover:font-extrabold hover:uppercase"
           to="/"
         >
           Home
         </NavLink>
-        <NavLink
-          className="text-center px-8 hover:text-purple-950 hover:font-extrabold hover:uppercase"
-          to="/myprojects"
-        >
-          My Projects
-        </NavLink>
+        <div className="relative text-center px-8">
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            className="text-center px-8 hover:text-purple-950 hover:font-extrabold hover:uppercase"
+            type="button"
+            onClick={() => {
+              const dropdown = document.getElementById("dropdown");
+              dropdown.classList.toggle("hidden");
+            }}
+          >
+            My Projects
+            <svg
+              className="w-2.5 h-2.5 ms-3 inline"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </button>
+          <div
+            id="dropdown"
+            className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-purple-900"
+          >
+            <ul
+              className="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  onClick={() => navigate("/myprojects/pro1")}
+                  className="block px-4 py-2 hover:bg-gray-800  dark:hover:bg-gray-800   dark:bg-purple-900"
+                >
+                  Project 1
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => navigate("/myprojects/pro2")}
+                  className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-800  dark:bg-purple-900"
+                >
+                  Project 2
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => navigate("/myprojects/pro3")}
+                  className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-800  dark:bg-purple-900"
+                >
+                  Project 3
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => navigate("/myprojects/pro4")}
+                  className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-800  dark:bg-purple-900"
+                >
+                  Project 4
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => navigate("/myprojects/pro5")}
+                  className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-800  dark:bg-purple-900"
+                >
+                  Project 5
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <NavLink
           className="text-center px-6 hover:text-purple-950 hover:font-extrabold hover:uppercase"
           to="/aboutme"
@@ -36,28 +111,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-{
-  /* <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-</svg>
-</button>
-
-<!-- Dropdown menu -->
-<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-      </li>
-    </ul>
-</div> */
-}
