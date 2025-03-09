@@ -22,3 +22,7 @@
   left: 0;
   right: 0;
 }
+
+.active {
+  text-shadow: blueviolet;
+}
