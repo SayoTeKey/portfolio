@@ -6,7 +6,7 @@ const Navigation = () => {
   const navigate = useNavigate();
   return (
     <>
-      <nav className="bg-red-200 sticky -top-10 shadow-lg mx-2 px-4 pb-2 pt-2 tracking-widest rounded grid grid-cols-4 gap-x-3 divide-purple-950 text-grey-600 z-50">
+      <nav className="bg-red-200 sticky top-10 shadow-lg mx-2 px-4 pb-2 pt-2 tracking-widest rounded grid grid-cols-4 gap-x-3 divide-purple-950 text-grey-600 z-50">
         <NavLink
           className="text-center px-4 hover:text-purple-950 hover:font-extrabold hover:uppercase"
           to="/"
@@ -34,9 +34,9 @@ const Navigation = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m1 1 4 4 4-4"
               />
             </svg>
