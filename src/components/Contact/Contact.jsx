@@ -4,20 +4,21 @@ import contact_panda from "../../assets/images/contact-panda.jpg";
 const Contact = () => {
   return (
     <div className="">
-      <h1 className="font-bold text-4xl text-slate-700 mb-6">Contact me</h1>
-      <p>I'm looking forward to hearing from you</p>
-      <p>Please send me a message!</p>
-
       <div>
-        <div className="px-5 grid gap-8 grid-cols-1 md:grid-cols-2 py-24 mx-auto text-gray-900 rounded-lg">
+        <h1 className="text-4xl lg:text-5xl mt-8 font-bold leading-tight">
+          Let's talk about everything!
+        </h1>
+        <p className="py-7">I'm looking forward to hearing from you</p>{" "}
+        {/* <p>Please send me a message!</p> */}
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 pb-14 mx-auto text-gray-900 rounded-lg">
           <div className="flex flex-col justify-center">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-                Let's talk about everything!
-              </h2>
-              <div className="text-gray-700 mt-8">
+              <div className="text-gray-800 mt-4">
                 Do u hate forms? Send me an &nbsp;
-                <a className="underline" href="mailto:someone@gmail.com">
+                <a
+                  className="underline uppercase font-bold"
+                  href="mailto:someone@gmail.com"
+                >
                   email
                 </a>
                 &#32;:
@@ -33,7 +34,7 @@ const Contact = () => {
           </div>
           <form>
             <div>
-              <span className="uppercase text-sm text-gray-600 font-bold">
+              <span className="uppercase text-sm text-gray-800 font-bold">
                 Full Name
               </span>
               <input
@@ -44,7 +45,7 @@ const Contact = () => {
               />
             </div>
             <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-bold">
+              <span className="uppercase text-sm text-gray-800 font-bold">
                 Email
               </span>
               <input
@@ -55,7 +56,7 @@ const Contact = () => {
               />
             </div>
             <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-bold">
+              <span className="uppercase text-sm text-gray-800 font-bold">
                 Phone Number
               </span>
               <input
@@ -66,7 +67,7 @@ const Contact = () => {
               />
             </div>
             <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-bold">
+              <span className="uppercase text-sm text-gray-800 font-bold">
                 Message
               </span>
               <textarea

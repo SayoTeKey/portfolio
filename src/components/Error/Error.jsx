@@ -7,18 +7,18 @@ const Error = () => {
   const navigate = useNavigate();
   const [count, setCount] = useState(15);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCount((prev) => prev - 1);
-  //   }, 1000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prev) => prev - 1);
+    }, 1000);
 
-  //   const timeout = setTimeout(() => navigate("/"), 15000);
+    const timeout = setTimeout(() => navigate("/"), 15000);
 
-  //   return () => {
-  //     clearInterval(interval);
-  //     clearTimeout(timeout);
-  //   };
-  // }, [navigate]);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [navigate]);
 
   return (
     // <div className="relative h-screen w-fit grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 ">

@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
+import Footer from "../Footer";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -14,33 +15,36 @@ const Navigation = () => {
           Home
         </NavLink>
         <div className="relative text-center px-8">
-          <button
-            id="dropdownDefaultButton"
-            data-dropdown-toggle="dropdown"
-            className="text-center px-8 hover:text-purple-950 hover:font-extrabold hover:uppercase"
-            type="button"
-            onClick={() => {
-              const dropdown = document.getElementById("dropdown");
-              dropdown.classList.toggle("hidden");
-            }}
-          >
-            My Projects
-            <svg
-              className="w-2.5 h-2.5 ms-3 inline"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
+          <NavLink to="/myprojects">
+            {/* useState mit open/close */}
+            <button
+              id="dropdownDefaultButton"
+              data-dropdown-toggle="dropdown"
+              className="text-center px-8 hover:text-purple-950 hover:font-extrabold hover:uppercase"
+              type="button"
+              onClick={() => {
+                const dropdown = document.getElementById("dropdown");
+                dropdown.classList.toggle("hidden");
+              }}
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
-          </button>
+              My Projects
+              <svg
+                className="w-2.5 h-2.5 ms-3 inline"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+          </NavLink>
           <div
             id="dropdown"
             className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-purple-900"
@@ -50,12 +54,12 @@ const Navigation = () => {
               aria-labelledby="dropdownDefaultButton"
             >
               <li>
-                <a
-                  onClick={() => navigate("/myprojects/pro1")}
+                <NavLink
+                  to="/myprojects/pro1"
                   className="block px-4 py-2 hover:bg-gray-800  dark:hover:bg-gray-800   dark:bg-purple-900"
                 >
                   Project 1
-                </a>
+                </NavLink>
               </li>
               <li>
                 <a
@@ -105,7 +109,12 @@ const Navigation = () => {
           Contact
         </NavLink>
       </nav>
-      <Outlet />
+
+      <div className="relative bg-tori min-h-screen w-full -z-10 bg-cover bg-no-repeat bg-fixed overflow-hidden"></div>
+      <div className="z-10 absolute w-[60%] h-screen left-1/2 transform -translate-x-1/2">
+        <Outlet />
+      </div>
+      <Footer />
     </>
   );
 };

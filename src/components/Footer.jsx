@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-rose-200 max-w-full">
+    <footer className="bg-rose-200 max-w-full z-20">
       <div className="mx-auto  py-8 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center order-2"

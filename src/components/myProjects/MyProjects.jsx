@@ -18,18 +18,18 @@ const MyProjects = () => {
       <h1 className="tracking-widest font-bold text-4xl text-slate-700 mb-6">
         My Projects
       </h1>
-      <nav>
-        {/* <NavLink to="/myprojects/pro1">Project 1</NavLink>
+      {/* <nav>
+       <NavLink to="/myprojects/pro1">Project 1</NavLink>
         <NavLink to="/myprojects/pro2">Project 2</NavLink>
         <NavLink to="/myprojects/pro3">Project 3</NavLink>
-        <NavLink to="/myprojects/pro4">Project 4</NavLink> */}
+        <NavLink to="/myprojects/pro4">Project 4</NavLink> 
 
         <NavLink to="/myprojects/pro1">Project 1</NavLink>
         <NavLink to="/myprojects/pro2">Project 2</NavLink>
         <NavLink to="/myprojects/pro3">Project 3</NavLink>
         <NavLink to="/myprojects/pro4">Project 4</NavLink>
         <NavLink to="/myprojects/pro5">Project 5</NavLink>
-      </nav>
+      </nav> */}
       <section className="grid sm:grid-cols-1 md:grid-col-1 lg:grid-cols-2 gap-8">
         {/* Project 1 */}
         <a
@@ -147,7 +147,6 @@ const MyProjects = () => {
           </div>
         </a>
       </section>
-      <Outlet />
     </>
   );
 };
