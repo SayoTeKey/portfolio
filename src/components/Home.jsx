@@ -1,11 +1,11 @@
 import React from "react";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-import picturePro1 from ".././assets/images/project1.jpg";
-import picturePro2 from ".././assets/images/project2.jpg";
-import picturePro3 from ".././assets/images/project3.jpg";
-import picturePro4 from ".././assets/images/project4.jpg";
-import picturePro5 from ".././assets/images/project5.jpg";
+import picturePro1 from "../assets/images/project1.jpg";
+import picturePro2 from "../assets/images/project2.jpg";
+import picturePro3 from "../assets/images/project3.jpg";
+import picturePro4 from "../assets/images/project4.jpg";
+import picturePro5 from "../assets/images/project5.jpg";
 
 const Home = () => {
   // const navigate = useNavigate();
